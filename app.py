@@ -3,11 +3,10 @@ from Bard import Chatbot
 import re
 import pyttsx3
 import os
+import creds
 
 app = Flask(__name__)
-
-os.environ['API_KEY'] = 'WAgO2-Ons35wwPQOZBOtbTYevUTjddkvzQjCy_eVeIgKpDXndUe5RZWX7OYCHePxJFifIg.'
-token = os.environ.get('API_KEY')
+token = creds.API_KEY
 chatbot = Chatbot(token)
 
 engine = pyttsx3.init()
